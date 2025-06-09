@@ -1,0 +1,161 @@
+# =============================================================================
+# DATA SCIENCE & ANALYTICS
+# Core libraries for data manipulation, analysis, and machine learning
+# =============================================================================
+numpy==2.3.0                    # Fundamental package for scientific computing
+pandas==2.3.0                   # Data manipulation and analysis library
+matplotlib==3.10.3              # Plotting library for creating static visualizations
+seaborn==0.13.2                 # Statistical data visualization based on matplotlib
+plotly==6.1.2                   # Interactive plotting library
+scikit-learn==1.7.0             # Machine learning library
+scipy==1.15.3                   # Scientific computing library
+narwhals==1.42.0                # DataFrame interchange library
+contourpy==1.3.2                # Contour plotting for matplotlib
+cycler==0.12.1                  # Composable style cycles for matplotlib
+fonttools==4.58.2               # Font manipulation library
+kiwisolver==1.4.8               # Constraint solver for matplotlib
+matplotlib-inline==0.1.7        # Inline matplotlib backend for Jupyter
+pillow==11.2.1                  # Image processing library
+pyparsing==3.2.3                # Parsing library used by matplotlib
+threadpoolctl==3.6.0            # Thread pool control for NumPy/SciPy
+joblib==1.5.1                   # Lightweight pipelining for scikit-learn
+
+# =============================================================================
+# JUPYTER ENVIRONMENT
+# Jupyter Lab, notebook server, and interactive Python environment
+# =============================================================================
+jupyterlab==4.4.3               # Web-based interactive development environment
+jupyter_server==2.16.0          # Jupyter server backend
+jupyter_client==8.6.3           # Jupyter protocol client APIs
+jupyter_core==5.8.1             # Common functionality for Jupyter packages
+jupyter_server_terminals==0.5.3 # Terminal support for Jupyter server
+jupyterlab_server==2.27.3       # JupyterLab server extension
+jupyterlab_pygments==0.3.0      # Pygments theme for JupyterLab
+ipython==9.3.0                  # Enhanced interactive Python shell
+ipykernel==6.29.5               # IPython kernel for Jupyter
+ipython_pygments_lexers==1.1.1  # Additional lexers for IPython
+jedi==0.19.2                    # Autocompletion and static analysis
+notebook_shim==0.2.4            # Compatibility layer for classic notebooks
+nbclient==0.10.2                # Client library for executing notebooks
+nbconvert==7.16.6               # Converting Jupyter notebooks
+nbformat==5.10.4                # Jupyter notebook format
+jupyter-events==0.12.0          # Event system for Jupyter
+jupyter-lsp==2.2.5              # Language Server Protocol integration
+prompt_toolkit==3.0.51          # Library for building interactive CLIs
+Pygments==2.19.1                # Syntax highlighting library
+parso==0.8.4                    # Python parser for Jedi
+stack-data==0.6.3               # Extract data from stack frames
+asttokens==3.0.0                # Annotate AST with source text
+executing==2.2.0                # Get currently executing AST node
+pure_eval==0.2.3                # Safe evaluation of expressions
+decorator==5.2.1                # Better decorators for Python
+comm==0.2.2                     # Jupyter messaging protocol
+debugpy==1.8.14                 # Debugger for Python in VS Code/Jupyter
+
+# =============================================================================
+# WEB & HTTP
+# Libraries for web scraping, HTTP requests, and web data handling
+# =============================================================================
+requests==2.32.3                # HTTP library for humans
+httpx==0.28.1                   # Async HTTP client
+httpcore==1.0.9                 # Low-level HTTP implementation
+beautifulsoup4==4.13.4          # HTML/XML parsing and web scraping
+urllib3==2.4.0                  # HTTP client with connection pooling
+certifi==2025.4.26              # Collection of Root Certificates
+charset-normalizer==3.4.2       # Character encoding detection
+idna==3.10                      # Internationalized domain names
+h11==0.16.0                     # Pure-Python HTTP/1.1 protocol implementation
+soupsieve==2.7                  # CSS selector library for BeautifulSoup
+websocket-client==1.8.0         # WebSocket client library
+
+# =============================================================================
+# ASYNC & CONCURRENCY
+# Libraries for asynchronous programming and concurrency
+# =============================================================================
+anyio==4.9.0                    # High-level async concurrency framework
+async-lru==2.0.5                # LRU cache for asyncio
+nest-asyncio==1.6.0             # Patch asyncio to allow nested event loops
+sniffio==1.3.1                  # Sniff out which async library is being used
+tornado==6.5.1                  # Scalable, non-blocking web server
+
+# =============================================================================
+# DATA FORMATS & SERIALIZATION
+# Libraries for handling various data formats (JSON, YAML, etc.)
+# =============================================================================
+PyYAML==6.0.2                   # YAML parser and emitter
+json5==0.12.0                   # JSON5 format support
+jsonschema==4.24.0              # JSON Schema validation
+jsonschema-specifications==2025.4.1  # JSON Schema meta-schemas
+jsonpointer==3.0.0              # JSON Pointer implementation
+fastjsonschema==2.21.1          # Fast JSON schema validation
+referencing==0.36.2             # JSON reference resolution
+rpds-py==0.25.1                 # Persistent data structures
+defusedxml==0.7.1               # XML bomb protection
+bleach==6.2.0                   # HTML sanitization library
+mistune==3.1.3                  # Markdown parser
+pandocfilters==1.5.1            # Utilities for writing Pandoc filters
+tinycss2==1.4.0                 # CSS parser
+webencodings==0.5.1             # Character encoding for web
+webcolors==24.11.1              # Color name and value conversions
+
+# =============================================================================
+# DATE & TIME
+# Libraries for date, time, and timezone handling
+# =============================================================================
+python-dateutil==2.9.0.post0    # Extensions to the standard datetime module
+pytz==2025.2                    # World timezone definitions
+tzdata==2025.2                  # IANA timezone data
+arrow==1.3.0                    # Better dates and times for Python
+isoduration==20.11.0            # ISO 8601 duration parsing
+
+# =============================================================================
+# VALIDATION & TYPE CHECKING
+# Libraries for data validation and type checking
+# =============================================================================
+attrs==25.3.0                   # Classes without boilerplate
+typing_extensions==4.14.0       # Backported type hints
+types-python-dateutil==2.9.0.20250516  # Type stubs for python-dateutil
+rfc3339-validator==0.1.4        # RFC 3339 date/time validation
+rfc3986-validator==0.1.1        # RFC 3986 URI validation
+fqdn==1.5.1                     # Fully qualified domain name validation
+uri-template==1.3.0             # URI template parsing
+overrides==7.7.0                # Decorator to mark method overrides
+
+# =============================================================================
+# SYSTEM & PROCESS MANAGEMENT
+# Libraries for system interaction and process management
+# =============================================================================
+psutil==7.0.0                   # Cross-platform system and process utilities
+appnope==0.1.4                  # Disable App Nap on macOS
+pexpect==4.9.0                  # Controlling interactive programs
+ptyprocess==0.7.0               # Run subprocess in pseudo-terminal
+terminado==0.18.1               # Tornado-based terminal emulator
+Send2Trash==1.8.3               # Send files to trash
+wcwidth==0.2.13                 # Measure display width of unicode strings
+
+# =============================================================================
+# SECURITY & CRYPTOGRAPHY
+# Libraries for security, hashing, and cryptographic operations
+# =============================================================================
+argon2-cffi==25.1.0             # Argon2 password hashing
+argon2-cffi-bindings==21.2.0    # Low-level bindings for Argon2
+cffi==1.17.1                    # C Foreign Function Interface
+pycparser==2.22                 # C parser in Python
+
+# =============================================================================
+# UTILITIES & INFRASTRUCTURE
+# General utilities, packaging, and infrastructure libraries
+# =============================================================================
+packaging==25.0                 # Core utilities for Python packages
+setuptools==78.1.1              # Package discovery and resource access
+wheel==0.45.1                   # Built-package format for Python
+platformdirs==4.3.8             # Platform-specific directories
+six==1.17.0                     # Python 2 and 3 compatibility
+traitlets==5.14.3               # Configuration system for Python apps
+MarkupSafe==3.0.2               # Safe string class for HTML/XML markup
+Jinja2==3.1.6                   # Template engine
+babel==2.17.0                   # Internationalization utilities
+sqlitedict==2.1.0               # Persistent dict backed by SQLite
+prometheus_client==0.22.1       # Prometheus monitoring client
+python-json-logger==3.3.0       # JSON formatter for Python logging
+pyzmq==26.4.0                   # Python bindings for ZeroMQ
