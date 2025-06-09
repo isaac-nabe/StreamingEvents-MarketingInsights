@@ -2,6 +2,46 @@
 
 A comprehensive data analysis project examining streaming platform user behavior, content performance, and marketing effectiveness using a synthetic dataset of 50,501 content events.
 
+## 📋 Table of Contents
+
+- [🎯 Project Overview](#-project-overview)
+- [📊 Dataset Description](#-dataset-description)
+  - [User Demographics](#user-demographics)
+  - [Content Information](#content-information)
+  - [Engagement Metrics](#engagement-metrics)
+  - [Marketing & Revenue](#marketing--revenue)
+- [🏗️ Project Structure](#️-project-structure)
+- [🛠️ Setup and Installation](#️-setup-and-installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation Steps](#installation-steps)
+  - [Option A: Using Python venv (Standard)](#option-a-using-python-venv-standard)
+  - [Option B: Using Conda/Miniconda (Recommended for Data Science)](#option-b-using-condaminiconda-recommended-for-data-science)
+  - [Reactivating Your Environment](#reactivating-your-environment)
+- [🔍 Analysis Workflow](#-analysis-workflow)
+  - [Phase 1: Data Exploration & Cleaning](#phase-1-data-exploration--cleaning)
+  - [Phase 2: User Behavior Analysis](#phase-2-user-behavior-analysis)
+  - [Phase 3: Content Performance Analysis](#phase-3-content-performance-analysis)
+  - [Phase 4: Marketing Effectiveness](#phase-4-marketing-effectiveness)
+  - [Phase 5: Revenue Optimization](#phase-5-revenue-optimization)
+- [📈 Key Technologies](#-key-technologies)
+  - [Data Science & Analytics](#data-science--analytics)
+  - [Development Environment](#development-environment)
+  - [Data Visualization](#data-visualization)
+- [🎯 Key Research Questions](#-key-research-questions)
+  - [1. Binge-Watching Behavior & Churn Risk Analysis](#1-binge-watching-behavior--churn-risk-analysis)
+  - [2. Ad Performance & Geographic Conversion Analysis](#2-ad-performance--geographic-conversion-analysis)
+  - [3. Platform-Genre Ad Inventory Optimization](#3-platform-genre-ad-inventory-optimization)
+- [📊 Expected Deliverables](#-expected-deliverables)
+  - [📁 GitHub Repository](#-github-repository)
+  - [🧹 Cleaned & Processed Data](#-cleaned--processed-data)
+  - [📓 Jupyter Notebooks](#-jupyter-notebooks)
+  - [📋 Written Insights Reports](#-written-insights-reports)
+  - [📊 Dashboard](#-dashboard)
+  - [🎤 Slide Deck](#-slide-deck)
+  - [🔧 Supplementary Files](#-supplementary-files)
+- [🔬 Methodology & Standards](#-methodology--standards)
+- [📄 Project Purpose](#-project-purpose)
+
 ## 🎯 Project Overview
 
 This project analyzes streaming platform data to uncover insights about:
