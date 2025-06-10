@@ -41,6 +41,7 @@ A comprehensive data analysis project examining streaming platform user behavior
   - [🔧 Supplementary Files](#-supplementary-files)
 - [🔬 Methodology & Standards](#-methodology--standards)
 - [📄 Project Purpose](#-project-purpose)
+- [🟢 Current Progress](#-current-progress)
 
 ## 🎯 Project Overview
 
@@ -53,7 +54,7 @@ This project analyzes streaming platform data to uncover insights about:
 
 ## 📊 Dataset Description
 
-The raw dataset contains **50,501 streaming events** with the following key attributes:
+The raw dataset (`content_events_50k_raw.csv`) contains **50,501 streaming events** with the following key attributes:
 
 ### User Demographics
 - User ID, age group, gender, country
@@ -81,12 +82,14 @@ The raw dataset contains **50,501 streaming events** with the following key attr
 StreamingEvents-MarketingInsights/
 ├── data/
 │   ├── raw/                     # Original dataset
-│   │   └── content_events_uncleaned_50k.csv
+│   │   └── content_events_50k_raw.csv
 │   └── processed/               # Cleaned and aggregated data
 ├── notebooks/                   # Jupyter notebooks for analysis
+│   └── 01_data_quality_audit.ipynb  # Data quality exploration & issue logging
 ├── sql/                         # SQL queries and database files
 ├── dashboard/                   # Interactive dashboards
 ├── reports/                     # Final analysis reports
+│   └── 01_data_issues_log.csv   # Automated data quality issues tracking
 ├── slides/                      # Presentation materials
 ├── requirements.txt             # Python dependencies
 └── README.md                    # Project documentation
@@ -164,33 +167,50 @@ For future sessions:
 - **venv users**: `source venv/bin/activate` (or `venv\\Scripts\\activate` on Windows)
 - **conda users**: `conda activate marketinganalysis`
 
+### Setting Up Jupyter Kernel in VS Code
+
+To use your environment in VS Code notebooks:
+
+1. **Register the environment** (run once in your activated environment):
+   ```bash
+   python -m ipykernel install --user --name marketinganalysis --display-name "Python (marketinganalysis)"
+   ```
+
+2. **In VS Code**: Reload window (`Ctrl+Shift+P` → "Reload Window"), open a notebook, and select **Python (marketinganalysis)** from the kernel picker.
+
 ## 🔍 Analysis Workflow
 
-### Phase 1: Data Exploration & Cleaning
-- Initial data quality assessment
-- Missing value analysis and treatment
-- Outlier detection and handling
-- Data type optimization
+### Phase 1: Data Quality Audit & Issue Resolution
+- Comprehensive data quality exploration and conceptualization
+- Automated issue logging across all data dimensions
+- Issue resolution strategy development
+- Purpose-driven cleaning decisions based on analytical objectives
 
-### Phase 2: User Behavior Analysis
+### Phase 2: Data Cleaning & Processing
+- Implementation of validated issue resolutions
+- Purpose-driven data cleaning based on analytical needs
+- Clean dataset export in optimized format
+- Data validation and quality assurance
+
+### Phase 3: User Behavior Analysis
 - Demographic segmentation
 - Engagement pattern analysis
 - Churn risk modeling
 - User journey mapping
 
-### Phase 3: Content Performance Analysis
+### Phase 4: Content Performance Analysis
 - Genre popularity trends
 - Content completion rates
 - Seasonal viewing patterns
 - Device and platform preferences
 
-### Phase 4: Marketing Effectiveness
+### Phase 5: Marketing Effectiveness
 - Channel attribution analysis
 - Ad engagement metrics
 - Conversion funnel analysis
 - ROI calculations by channel
 
-### Phase 5: Revenue Optimization
+### Phase 6: Revenue Optimization
 - ECPM analysis by segment
 - Subscription type performance
 - Revenue per user calculations
@@ -205,6 +225,7 @@ For future sessions:
 - **plotly** - Interactive visualizations
 - **scikit-learn** - Machine learning algorithms
 - **scipy** - Statistical analysis
+- **tabulate** - Formatted table output for data quality reporting
 
 ### Development Environment
 - **Jupyter Lab** - Interactive development
@@ -272,16 +293,19 @@ For future sessions:
   - `pf_genre.csv` — fill-rate, eCPM, revenue, margin by platform & genre
 
 ### 📓 Jupyter Notebooks
-- **`01_data_overview.ipynb`**: Raw data loading, validation, cleaning, and export to Parquet/SQLite
-- **`02_binge_churn_analysis.ipynb`**: Binge behavior → churn analysis, with 2–3 key visuals
-- **`03_ad_performance_analysis.ipynb`**: Ad performance by tier & geography, with funnel and heatmap
-- **`04_fillrate_cpm_analysis.ipynb`**: Platform×genre fill-rate & eCPM analysis, with bubble chart and margin summary
+- **`01_data_quality_audit.ipynb`**: ✅ **COMPLETED** - Data quality exploration, conceptualization, and automated issue logging
+- **`02_data_cleaning_solutions.ipynb`**: Implementation of data cleaning based on finalized issue resolutions
+- **`03_binge_churn_analysis.ipynb`**: Binge behavior → churn analysis, with 2–3 key visuals
+- **`04_ad_performance_analysis.ipynb`**: Ad performance by tier & geography, with funnel and heatmap
+- **`05_fillrate_cpm_analysis.ipynb`**: Platform×genre fill-rate & eCPM analysis, with bubble chart and margin summary
 
 ### 📋 Written Insights Reports (in `/reports/`)
+- **`01_data_issues_log.csv`**: ✅ **COMPLETED** - Automated data quality assessment with 24 identified issues across single-column and cross-field validations
+- **`02_data_issues_resolution_plan.md`**: Issue-by-issue resolution strategies and cleaning decisions
 - **`00_data_dictionary.md`**: Column definitions, data types, and missingness notes
-- **`01_binge_churn_insights.md`**: Methodology, charts, and marketing recommendations for Question 1
-- **`02_ad_performance_insights.md`**: Methodology, charts, and recommendations for Question 2
-- **`03_fillrate_cpm_insights.md`**: Methodology, visuals, and action items for Question 3
+- **`03_binge_churn_insights.md`**: Methodology, charts, and marketing recommendations for Question 1
+- **`04_ad_performance_insights.md`**: Methodology, charts, and recommendations for Question 2
+- **`05_fillrate_cpm_insights.md`**: Methodology, visuals, and action items for Question 3
 - **`Final_Marketing_Report.pdf`**: Cohesive 10–15 page executive report tying all three questions together with combined recommendations and roadmap
 
 ### 📊 Dashboard (in `/dashboard/`)
@@ -326,6 +350,38 @@ This is a **portfolio project** designed to showcase data science and marketing 
 ---
 
 **Last Updated**: June 2025  
-**Status**: Active Development  
+**Status**: Phase 1 Complete - Data quality audit finished. Proceeding to issue resolution planning.  
 **Data Volume**: 50,501 streaming events  
 **Analysis Timeframe**: Multi-year historical data (2017-2024)
+
+## 🟢 Current Progress
+
+### Phase 1: Data Quality Audit (COMPLETED ✅)
+- ✅ **Data Conceptualization**: Established grain, key metrics, dimensions, and example record stories
+- ✅ **Comprehensive Issue Logging**: Automated detection of 24 data quality issues using pandas
+  - Single-column checks: null values, data types, format validation, range validation, categorical validation
+  - Cross-field checks: temporal ordering, duration consistency, ads-specific rules, ID matching
+- ✅ **Quality Assessment Framework**: Established systematic approach for future data validation
+- ✅ **Raw Data Analysis**: Complete examination of `content_events_50k_raw.csv`
+
+### 🔄 Current Phase: Issue Resolution Planning
+- **Issue Prioritization**: Determine which issues are truly solvable vs. documentable
+- **Resolution Strategy Development**: Define specific solutions for each resolvable issue
+- **Impact Assessment**: Evaluate how each issue affects the three key research questions
+- **Documentation Planning**: Establish guidelines for flagging and documenting persistent issues
+
+### 📋 Next Steps
+1. **Finalize Issues Log**: Complete resolution planning for all 24 identified issues
+2. **Implement Data Cleaning**: Apply validated solutions in systematic cleaning process
+3. **Export Clean Dataset**: Create processed data in optimal format (Parquet/SQLite)
+4. **Begin Analysis Framework**: Set up notebooks for specific research questions
+5. **Start Phase 2**: User behavior and binge-watching analysis
+
+### 🔍 Data Quality Methodology
+
+This project follows a **purpose-driven data quality approach**:
+- **Deliberate Assessment**: Manual examination before automated fixes to avoid bias
+- **Question-Focused Cleaning**: Only address issues relevant to analytical objectives
+- **Comprehensive Logging**: Document all issues for future reference and transparency
+- **Conservative Treatment**: Preserve data integrity by avoiding unnecessary modifications
+- **Strategic Documentation**: Flag persistent issues with analysis considerations rather than dropping valuable data

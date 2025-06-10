@@ -1,0 +1,23 @@
+column,issue,row_count,solvable?,resolution
+EPISODE_NUMBER,Null/Missing,30909,TBC,Decide on drop or impute
+RATING,Null/Missing,28530,TBC,Decide on drop or impute
+AD_EXPOSURE,Non-ad content should not have AD_EXPOSURE 'Y',25911,Yes,Set to 'N' or null
+AD_ID,Non-ad content should not have AD_ID,25911,Yes,Clear AD_ID
+AD_ID,Null/Missing,21259,TBC,Decide on drop or impute
+ECPM_USD,Null/Missing,21259,TBC,Decide on drop or impute
+RELEASE_DATE/START_TIME,release after start,6643,TBC,Fix source or drop
+COUNTRY_CODE,Bad format (≠ ^[A-Z]{2}$),3969,TBC,Enforce regex ^[A-Z]{2}$
+RATING,Ads should not have rating,2561,Yes,Drop rating
+SESSION_ID/USER_ID,SESSION_ID user part and USER_ID mismatch,2499,TBC,Investigate source or align USER_ID with SESSION_ID
+AD_ID,Missing AD_ID for Ad content,2462,TBC,
+AD_EXPOSURE,Ad must have exposure 'Y',2462,Yes,Set to 'Y'
+GENDER,Unexpected category,2387,TBC,"Map to one of ['Male', 'Female', 'Other', 'Prefer not to say']"
+START_TIME/END_TIME/VIEW_DATE,session times outside VIEW_DATE,2041,TBC,Check session and view date consistency
+IS_RETURNING_USER,Unexpected category,2020,TBC,"Map to one of ['Y', 'N']"
+SESSION_ID,Bad format (≠ ^U\d+_S\d+$),2020,TBC,Enforce regex ^U\d+_S\d+$
+ACCOUNT_CREATION_DATE,Bad date format (not %Y-%m-%d),2002,Yes,Reformat to %Y-%m-%d
+VIEW_DATE,Bad date format (not %Y-%m-%d),1919,Yes,Reformat to %Y-%m-%d
+VIEW_DATE,Null/Missing,1515,TBC,Decide on drop or impute
+USER_ID,Bad format (≠ ^U\d+$),505,TBC,Enforce regex ^U\d+$
+USER_ID,"Missing or bad USER_ID, possible from SESSION_ID",505,TBC,"Check with stakeholder, then use USER_ID from SESSION_ID"
+,Duplicate row,416,Yes,drop_duplicates() later
